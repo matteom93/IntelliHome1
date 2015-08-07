@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IntelliHome</string>
+    <string name="action_settings">Informazioni</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas molestie purus a congue. In hac habitasse platea dictumst. Aliquam at consequat lorem. Pellentesque et elit turpis. Aliquam faucibus dui et elit consequat eu luctus ipsum venenatis. Fusce accumsan, metus id hendrerit pretium, metus metus hendrerit metus, posuere sagittis tortor magna id nulla. Nunc tristique sem in enim sagittis bibendum. Aenean sed eros nisi, quis sagittis enim. Nullam fermentum tincidunt elementum. Praesent gravida enim aliquet sem dictum pharetra. Sed accumsan elementum sodales. Pellentesque at nulla quam. Curabitur quis nunc neque. Suspendisse id lectus eu nibh luctus luctus. Etiam et pretium ante. Vestibulum adipiscing varius turpis ac bibendum. Aliquam ultricies interdum magna sit amet faucibus. Ut laoreet lobortis fringilla. Sed ut dui tincidunt massa dignissim mollis. Pellentesque auctor elit quis tellus venenatis condimentum. Vivamus a quam mauris, vitae placerat mi. Pellentesque ac purus et ante molestie mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed viverra libero in mi congue tempor. Nam ut velit lacus, ac pharetra turpis. Nam adipiscing mi quis magna posuere porta in sit amet nunc. Aenean eu felis eu lacus commodo egestas a non urna. Duis egestas egestas nibh, a ultrices enim porttitor a. Pellentesque ultrices magna enim. Suspendisse a metus sit amet magna porttitor porttitor ac in quam. Sed eget enim orci. Maecenas placerat auctor nunc porta fringilla. Phasellus imperdiet scelerisque sapien, non feugiat nisl molestie a. Etiam porta porta nulla sit amet mattis. Donec nibh augue, sollicitudin euismod condimentum id, egestas eu felis. Etiam sit amet leo quis est hendrerit placerat et ac ligula. Sed id est vitae leo varius rutrum. Nullam id nisl est. Aliquam tempor fermentum nisi. Sed porttitor sodales lorem, sed auctor elit placerat nec. Donec sodales pretium tellus sed molestie. Mauris ac nunc risus, ac facilisis metus. Pellentesque semper, mi sed dignissim commodo, tellus diam sodales quam, et porttitor leo lacus sodales dui. Ut sed justo a massa eleifend volutpat iaculis a nisi. Nullam elementum enim erat, vitae fermentum velit. Ut consequat facilisis ligula, pharetra dictum lorem tincidunt ut. In ipsum turpis, sollicitudin malesuada placerat at, lobortis lobortis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse eget magna eros, nec auctor mi. Duis accumsan, ligula eu pulvinar tincidunt, turpis risus porta massa, et volutpat sem odio ac massa. Morbi eget tortor mauris. Vivamus non pretium mi. Sed vitae sodales ante. In hac habitasse platea dictumst. Nulla nisl nisi, sollicitudin vel placerat et, euismod eu purus. Duis sollicitudin lacus quis justo lobortis at viverra quam tincidunt. Nullam molestie est tincidunt ante laoreet tincidunt. Etiam at lectus in nulla rhoncus hendrerit et pharetra elit. Aliquam eu egestas ipsum. In hac habitasse platea dictumst. Fusce porttitor molestie auctor. Fusce adipiscing adipiscing leo, in hendrerit diam sollicitudin et.</string>
+    <string name="segnalainvia">SEGNALA</string>
+    <string name="nometesto">Nome</string>
+    <string name="cognometesto">Cognome</string>
+    <string name="segnalazionetesto">Segnalazione</string>
+    <string-array name="destinazioni">
+        <item >Carabinieri 112</item>
+        <item >Ufficio Tecnico</item>
+        <item >Ufficio Turistico</item>
+        <item >Segreteria</item>
+    </string-array>
+    <string name="ricaricanotizie">Ricarica Notizie</string>
+    <string name="descrizionelogo">Icona di OpenComune</string>
+    <string name="info1">IntelliHome è una applicazione pensata per monitorare in modo semplice ed efficace i consumi di acqua e corrente elettrica.</string>
+    <string name="info2">Inoltre forisce anche delle stime sui consumi futuri.</string>
+    <string name="oratesto">Ora (hh:mm:ss)</string>
+    <string name="datatesto">Data (dd-mm-yyyy)</string>
+    <string name="luogotesto">Luogo</string>
+    <string name="analisiconsumo">Analizza consumi</string>
+
+</resources>
