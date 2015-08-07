@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llconsumi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -16,19 +17,6 @@
         android:layout_margin="10dip"
         android:onClick="onClick"
         android:text="@string/analisiconsumo" />
-
-    <ScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <LinearLayout
-            android:id="@+id/listamoduli"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-        </LinearLayout>
-    </ScrollView>
 
     <EditText
         android:id="@+id/editText1"
@@ -62,5 +50,12 @@
         android:text=""
         android:textSize="20dp" 
         android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/chartcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
 
 </LinearLayout>

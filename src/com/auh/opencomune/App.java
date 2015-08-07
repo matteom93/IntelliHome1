@@ -15,6 +15,7 @@ import java.util.concurrent.ExecutionException;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
+import org.achartengine.chart.BarChart;
 import org.achartengine.chart.PointStyle;
 import org.achartengine.model.XYMultipleSeriesDataset;
 import org.achartengine.model.XYSeries;
@@ -24,6 +25,7 @@ import org.achartengine.renderer.XYSeriesRenderer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -33,6 +35,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -231,7 +234,6 @@ public class App extends FragmentActivity {
 	
 	public void analisi_consumi()
 	{
-		String stringa_orario="";
 		SimpleDateFormat sdt = new SimpleDateFormat("yyyy-mm-dd");
 		try {
 			Toast.makeText(App.this, "Attendi qualche istante", Toast.LENGTH_SHORT).show();
@@ -285,7 +287,7 @@ public class App extends FragmentActivity {
 		
 		//CONTINUARE!!!!
 		// 1) Scrivere su casella di testo acqua_gior, fare *7 e scrivere previsione settimanale
-		// 2) Introdurre possibilità di scelta giorno da agenda
+		// 2) Introdurre possibilitï¿½ di scelta giorno da agenda
 		// 3) Disegnare il grafico
 		// 4) Cambiare icona 
 		
@@ -293,13 +295,10 @@ public class App extends FragmentActivity {
 	}
 	
 	public void grafico_acqua(int[] indici_giorno){ //costruzione del grafico sul consumo di acqua
-		LinearLayout layout;
-	    layout=(LinearLayout)findViewById(R.id.chart);
-		setContentView(R.layout.cons_acqua_layout);	
+		LinearLayout layout = (LinearLayout)findViewById(R.id.chartcontainer);	
 		XYSeries series = new XYSeries("Consumo giornaliero di acqua");
-		XYMultipleSeriesDataset mySeries=new XYMultipleSeriesDataset();
-		int i=0;
-		for (i=0;i<num_giorno;i++) //popolamento della serie per grafico
+		XYMultipleSeriesDataset mySeries= new XYMultipleSeriesDataset();
+		for (int i=0;i<num_giorno;i++) //popolamento della serie per grafico
 			series.add(orari_acqua[indici_giorno[i]],consumo_acqua[indici_giorno[i]]);
 		mySeries.addSeries(series);
 		//Paramentri costruttivi del grafico
@@ -311,19 +310,16 @@ public class App extends FragmentActivity {
 		renderer.setPointStrokeWidth(3);
 		XYMultipleSeriesRenderer mRenderer = new XYMultipleSeriesRenderer();
 		mRenderer.addSeriesRenderer(renderer);
-		mRenderer.setMarginsColor(Color.argb(0x00, 0xff, 0x00, 0x00)); //margini trasparenti
-		//mRenderer.setPanEnabled(false, false); //no assi cartesiani
-		mRenderer.setYAxisMax(15);
-		mRenderer.setYAxisMin(0);
+		//mRenderer.setMarginsColor(Color.argb(0x00, 0xff, 0x00, 0x00)); //margini trasparenti
+		mRenderer.setPanEnabled(false, false); //no assi cartesiani
 		mRenderer.setShowGrid(true); // mostra griglia
-		GraphicalView grafico = ChartFactory.getLineChartView(this, mySeries, mRenderer);
-		//layout.addView(grafico); // <--------
-		try { //aspetta 2000 ms prima di tornare al layout di analisi consumi 
-			wait(2000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		setContentView(R.layout.moduli);
+		Log.d("Grafico","Grafico pronto da inserire");
+		
+		GraphicalView grafico = ChartFactory.getLineChartView(getBaseContext(), mySeries, mRenderer);
+		//layout.addView(grafico);
+		AlertDialog.Builder mbuilder = new AlertDialog.Builder(this);
+		mbuilder.setView(grafico);
+		mbuilder.create().show();
 	}
 	
 	public ArrayList <String> ricevinotizie()
